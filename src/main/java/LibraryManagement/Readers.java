@@ -65,7 +65,7 @@ public class Readers {
     public String toString (){
         return "Id: "+ id+ "\n"+
                 "Name: "+name+ "\n"+
-                "Address: "+address;
+                "Address: "+address+"\n";
     }
     
 }

@@ -10,26 +10,36 @@ package LibraryManagement;
  * @author altemir
  */
 public class Books {
+
     private int id = 0;
     private String title;
     private String author;
     private int year;
-    
-    public Books(int id, String title, String author, int year){
+
+    public Books(int id, String title, String author, int year) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.year = year;
     }
-    
-    
-    
+
+    public boolean equals(Object ref) {
+        Books other = (Books) ref;
+
+        if ((this.id == other.id) && (this.title.equalsIgnoreCase(other.title))
+                && (this.author.equalsIgnoreCase(other.author))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     @Override
-    public String toString(){
-        return "Id: "+getId()+"\n"+
-               "title: "+getTitle()+"\n"+
-               "author: "+getAuthor()+"\n"+
-               "year: "+getYear();
+    public String toString() {
+        return "Id: " + getId() + "\n"
+                + "title: " + getTitle() + "\n"
+                + "author: " + getAuthor() + "\n"
+                + "year: " + getYear() +"\n";
     }
 
     /**
@@ -87,6 +97,5 @@ public class Books {
     public void setYear(int year) {
         this.year = year;
     }
-    
-    
+
 }
